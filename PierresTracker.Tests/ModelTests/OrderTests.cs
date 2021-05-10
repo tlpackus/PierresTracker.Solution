@@ -49,6 +49,16 @@ namespace PierresTracker.Tests
       Order newOrder = new Order(orderDetails);
       int result = newOrder.Id;
       Assert.AreEqual(1, result);
-    }    
+    } 
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      string orderDetails1 = "1 loaf of bread";
+      string orderDetails2 = "3 pastries";
+      Order newOrder1 = new Order(orderDetails1);
+      Order newOrder2 = new Order(orderDetails2);
+      Order result = Order.Find(2);
+      Assert.AreEqual(newOrder2, result);
+    } 
   }
 } 
