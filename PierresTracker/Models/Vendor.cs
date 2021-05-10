@@ -18,5 +18,9 @@ namespace PierresTracker.Models
     {
       _instances.Clear();
     }
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
+    }
   }
 }  

@@ -31,5 +31,16 @@ namespace PierresTracker.Tests
       //Assert
       Assert.AreEqual(orderDetails, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsOrders_OrderList()
+    {
+      string description1 = "10 loaves of bread";
+      string description2 = "50 pastries";
+      Order newOrder1 = new Order(description1);
+      Order newOrder2 = new Order(description2);
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 } 
