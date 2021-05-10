@@ -42,5 +42,13 @@ namespace PierresTracker.Tests
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      string orderDetails = "1 loaf of bread and 5 pastries";
+      Order newOrder = new Order(orderDetails);
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
+    }    
   }
 } 
