@@ -34,10 +34,10 @@ namespace PierresTracker.Tests
     [TestMethod]
     public void GetAll_ReturnsOrders_OrderList()
     {
-      string description1 = "10 loaves of bread";
-      string description2 = "50 pastries";
-      Order newOrder1 = new Order(description1);
-      Order newOrder2 = new Order(description2);
+      string orderDetails1 = "10 loaves of bread";
+      string orderDetails2 = "50 pastries";
+      Order newOrder1 = new Order(orderDetails1);
+      Order newOrder2 = new Order(orderDetails2);
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newList, result);
