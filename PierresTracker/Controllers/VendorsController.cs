@@ -3,7 +3,7 @@ using System;
 using Microsoft.AspNetCore.Mvc;
 using PierresTracker.Models;
 
-namespace VendorTracker.Controllers
+namespace PierresTracker.Controllers
 {
   public class VendorsController : Controller
   {
